@@ -11,9 +11,15 @@ config_version=5
 [application]
 
 config/name="Plant Pioneer"
-config/version="0.0.1"
+config/version="МЕГА БЕТА ЗАКРЫТЫЙ БЕТА ТЕСТ АЛЬФА БЕТЫ БЕТА АЛЬФЫ СУПЕР HYU edition 0.0.0.0.0.0.0.0.0.0.1 abcd"
+run/main_scene="res://Scenes/world.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://Images/icon.svg"
+
+[display]
+
+window/size/viewport_height=640
+window/size/resizable=false
 
 [rendering]
 
