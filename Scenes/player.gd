@@ -1,8 +1,23 @@
-extends Node2D
+extends Sprite2D
 
 @onready var tile_map = $"../TileMap"
+@onready var sprite_2d = $Sprit
+
+var is_moving = false
+
+func _physics_process(delta: float) -> void:
+	if is_moving == false:
+		return
+	if global_position == sprite_2d.global_position:
+		is_moving = false
+		return
+	
+	sprite_2d.global_position = sprite_2d.global_position.move_toward(global_position, 1)
 
 func _process(delta: float) -> void:
+	if is_moving:
+		return
+	
 	if Input.is_action_pressed('ui_up'):
 		Move(Vector2.UP)
 	elif Input.is_action_pressed('ui_right'):
@@ -22,4 +37,6 @@ func Move(direction: Vector2):
 	if tile_data.get_custom_data("walkable") == false:
 		return
 	
+	is_moving = true
 	global_position = tile_map.map_to_local(target_tile)
+	sprite_2d.global_position = tile_map.map_to_local(current_tile)
