@@ -30,11 +30,12 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608,
 
 [node name="Player" type="Sprite2D" parent="."]
 position = Vector2(16, 16)
+scale = Vector2(1, 1)
 texture = ExtResource("2_cbbv1")
 script = ExtResource("2_6y6bq")
 
 [node name="Sprit" type="Sprite2D" parent="Player"]
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_t11jq")
 
 [node name="Camera2D" type="Camera2D" parent="Player/Sprit"]
