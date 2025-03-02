@@ -62,7 +62,6 @@ layer_0/tile_data = PackedInt32Array(65535, 262144, 65536, 131071, 262144, 65536
 
 [node name="Player" type="Sprite2D" parent="."]
 position = Vector2(48, 80)
-scale = Vector2(1, 1)
 texture = ExtResource("2_cbbv1")
 script = ExtResource("2_6y6bq")
 

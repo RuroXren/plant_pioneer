@@ -40,3 +40,8 @@ func Move(direction: Vector2):
 	is_moving = true
 	global_position = tile_map.map_to_local(target_tile)
 	sprite_2d.global_position = tile_map.map_to_local(current_tile)
+
+func _input(event: InputEvent) -> void:
+	var tre = Vector2i(2, 0)
+	if Input.is_action_pressed("ui_accept"):
+		tile_map.set_cell(0, tile_map.local_to_map(global_position), 0, tre, 0)
